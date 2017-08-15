@@ -3438,3 +3438,7 @@ msgid ""
 "Original Aeon. A big thanks to the master djh_ for creating the masterpiece "
 "that is original Aeon."
 msgstr "Der ursprüngliche Aeon Skin und dessen Name sind geistiges Eigentum von djh_. Aeon MQ 6 hingegen hat einen eigenständigen Code und benutzt keine Texturen des ursprünglichenen Aeon. Ein großes Dankeschön an den Meister djh_ für das Schaffen seines Meisterwerks, welches das ursprüngliche Aeon darstellt."
+
+msgctxt "#40000"
+msgid "Scroll Info off"
+msgstr "Scroll Info aus"

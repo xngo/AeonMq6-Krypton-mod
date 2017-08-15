@@ -993,7 +993,7 @@
 				</control>
 				<control type="radiobutton" id="9299">
 					<include>TopMenuRadioButton</include>
-					<label>Scroll Info aus (noch keine funktion)</label>
+					<label>40000</label>
 					<onclick>Skin.ToggleSetting(noscrollsetsinfo)</onclick>
 					<selected>!Skin.HasSetting(noscrollsetsinfo)</selected>
 					<visible>String.IsEqual(Container.Viewmode,SETS)</visible>

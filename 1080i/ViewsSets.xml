@@ -20,6 +20,16 @@
         <textcolor>FFFFFAF0</textcolor>
         <scroll>true</scroll>
     </include>
+	<include name="SetsValue_noscroll">
+        <width>423</width>
+        <height>20</height>
+        <aligny>top</aligny>
+        <align>left</align>
+        <font>Font_18A</font>
+        <textcolor>FFFFFAF0</textcolor>
+        <scroll>false</scroll>
+    </include>
+	
     <include name="ViewSets">
         <control type="group">
             <!-- default group -->
@@ -62,8 +72,10 @@
                 <colordiffuse>$VAR[value_texturecolor]</colordiffuse>
                 <animation effect="fade" end="85" condition="true">Conditional</animation>
             </control>
+			<!-- SetsLabel scroll -->
             <control type="group">
                 <visible>!String.IsEqual(ListItem.Label,..)</visible>
+				<visible>Window.IsActive(videos) + !Skin.HasSetting(noscrollsetsinfo)</visible>
                 <control type="label">
                     <include>SetsLabel</include>
                     <left>45</left>
@@ -148,6 +160,99 @@
                 </control>
                 <control type="label">
                     <include>SetsValue</include>
+                    <left>528</left>
+                    <top>584</top>
+                    <label>$INFO[ListItem.Director]$INFO[Window(Home).Property(SkinHelper.ListItem.Director)]</label>
+                </control>
+            </control>
+			<!-- SetsLabel noscroll -->
+            <control type="group">
+                <visible>!String.IsEqual(ListItem.Label,..)</visible>
+				<visible>Window.IsActive(videos) + Skin.HasSetting(noscrollsetsinfo)</visible>
+                <control type="label">
+                    <include>SetsLabel</include>
+                    <left>45</left>
+                    <top>434</top>
+                    <label>$VAR[value_ground6_label]</label>
+                    <visible>!Control.HasFocus(5801)</visible>
+                </control>
+                <control type="label">
+                    <include>SetsLabel</include>
+                    <left>45</left>
+                    <top>434</top>
+                    <label>345</label>
+                    <visible>Control.HasFocus(5801)</visible>
+                </control>
+                <control type="label">
+                    <include>SetsValue_noscroll</include>
+                    <left>45</left>
+                    <top>464</top>
+                    <label>$VAR[value_ground6_value]</label>
+                    <visible>!Control.HasFocus(5801)</visible>
+                </control>
+                <control type="label">
+                    <include>SetsValue_noscroll</include>
+                    <left>45</left>
+                    <top>464</top>
+                    <label>$INFO[Container(5801).ListItem.Property(Year)]</label>
+                    <visible>Control.HasFocus(5801)</visible>
+                </control>
+                <control type="label">
+                    <include>SetsLabel</include>
+                    <left>45</left>
+                    <top>494</top>
+                    <label>$LOCALIZE[21875]</label>
+                </control>
+                <control type="label">
+                    <include>SetsValue_noscroll</include>
+                    <left>45</left>
+                    <top>524</top>
+                    <label>$INFO[ListItem.Country]$INFO[Window(Home).Property(SkinHelper.ListItem.Country)]</label>
+                </control>
+                <control type="label">
+                    <include>SetsLabel</include>
+                    <left>528</left>
+                    <top>434</top>
+                    <label>$LOCALIZE[515]</label>
+                </control>
+                <control type="label">
+                    <include>SetsValue_noscroll</include>
+                    <left>528</left>
+                    <top>464</top>
+                    <label>$INFO[ListItem.Genre]$INFO[Window(Home).Property(SkinHelper.ListItem.Genre)]</label>
+                </control>
+                <control type="label">
+                    <include>SetsLabel</include>
+                    <left>528</left>
+                    <top>494</top>
+                    <label>$LOCALIZE[20388]</label>
+                </control>
+                <control type="label">
+                    <include>SetsValue_noscroll</include>
+                    <left>528</left>
+                    <top>524</top>
+                    <label>$INFO[ListItem.studio]$INFO[Window(Home).Property(SkinHelper.ListItem.Studio)]</label>
+                </control>
+                <control type="label">
+                    <include>SetsLabel</include>
+                    <left>45</left>
+                    <top>554</top>
+                    <label>$VAR[value_ground16_label]</label>
+                </control>
+                <control type="label">
+                    <include>SetsValue_noscroll</include>
+                    <left>45</left>
+                    <top>584</top>
+                    <label>$INFO[ListItem.Duration,, $LOCALIZE[31961]]$VAR[value_ground16_value]</label>
+                </control>
+                <control type="label">
+                    <include>SetsLabel</include>
+                    <left>528</left>
+                    <top>554</top>
+                    <label>$LOCALIZE[31090]</label>
+                </control>
+                <control type="label">
+                    <include>SetsValue_noscroll</include>
                     <left>528</left>
                     <top>584</top>
                     <label>$INFO[ListItem.Director]$INFO[Window(Home).Property(SkinHelper.ListItem.Director)]</label>
