@@ -736,6 +736,18 @@
                         <aspectratio align="center" aligny="top">keep</aspectratio>
                         <visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
                     </control>
+					
+<!-- ngo hinzugefügt icon videolist /bluray,bluray rip, 3d etc -->				
+					<control type="image">
+                        <left>370</left>
+                        <top>3</top>
+                        <width>40</width>
+                        <height>60</height>
+                        <texture>$VAR[VideoResolutionFlag]</texture>
+                        <visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
+                    </control>
+<!-- ngo hinzugefügt icon videolist /bluray,bluray rip, 3d etc -->					
+					
                 </itemlayout>
                 <focusedlayout condition="String.IsEmpty(Control.GetLabel(198)) | Window.IsActive(videos) + Skin.HasSetting(slimglasslistvideo) | Window.IsActive(music) + Skin.HasSetting(slimglasslistmusic)" width="450" height="60">
                     <control type="image">
