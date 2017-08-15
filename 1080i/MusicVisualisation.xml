@@ -175,6 +175,14 @@
             <texture background="true">ayes1.png</texture>
         </control>
 		</control>
+		
+		<control type="multiimage">	
+			<aspectratio>keep</aspectratio>
+			<include>WindowBG</include>
+			<imagepath fallback="special://skin/backgrounds/music.jpg" background="true">$INFO[skin.string(musicviz.bg)]</imagepath>
+			<visible>String.IsEqual(skin.string(vis_bg),custom)</visible>
+		</control>
+		
         <control type="image">
             <!-- Fanart -->
 			<left>0</left>

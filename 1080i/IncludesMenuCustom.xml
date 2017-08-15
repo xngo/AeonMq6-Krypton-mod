@@ -2487,6 +2487,27 @@
 					<onclick>Skin.SetString($INFO[skin.string(custom_action)],ActivateWindow(TVTimers))</onclick>
 					<include>DefaultReset</include>
 				</item>
+				
+<!--- test kodi commands -->
+				<item>
+					<label>XBMC Command</label>
+					<label2>XBMC Command</label2>
+					<property name="id">eigen</property>
+					<onclick>Skin.SetString($INFO[skin.string(custom_master)],XBMCcommand)</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)])</onclick>				
+					<include>DefaultReset</include>
+				</item>
+				
+				<item>
+					<label>audio profiles</label>
+					<label2>audio profiles</label2>
+					<property name="id">eigen</property>
+					<onclick>Skin.SetString($INFO[skin.string(custom_master)],audio profiles)</onclick>
+					<onclick>Skin.SetString($INFO[skin.string(custom_action)],RunScript(script.audio.profiles,0))</onclick>
+					<include>DefaultReset</include>
+				</item>
+<!--- test kodi commands -->
+				
 				<item>
 					<label>31416</label>
 					<!-- Extras -->

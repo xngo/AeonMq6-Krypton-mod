@@ -88,6 +88,65 @@
                     </control>
                 </focusedlayout>
                 <content>
+				
+<!-- audio profiles -->
+					<item>
+						<description>Audio Profiles</description>
+						<label>Audio Profiles</label>
+						<onclick>RunScript(script.audio.profiles,0)</onclick>
+					</item>
+<!-- reboot, shutdown, shutdown timer -->
+					<item id="1">
+                        <!-- ---------- -->
+                        <label>----------------</label>
+                        <onclick>-</onclick> 
+                    </item>			
+					<!-- reboot -->
+					<item id="1">
+						<description>Reboot button</description>
+						<label>Reboot</label>
+						<onclick>XBMC.Reset()</onclick>
+					</item>
+					<!-- Shutdown -->
+					<item id="1">
+						<description>Shutdown button</description>
+						<label>Shutdown</label>
+						<onclick condition="!Skin.HasSetting(EnableCustomShutDown)">Powerdown()</onclick>
+						<onclick condition="Skin.HasSetting(EnableCustomShutDown)">XBMC.RunScript($INFO[Skin.String(CustomShutdownCmd)],$INFO[Skin.String(CustomShutdownArg)])</onclick>
+					</item>
+					<!-- Custom Shutdown Timer -->
+					<item id="1">
+						<description>Custom Shutdown Timer</description>
+						<label>Shutdown Timer</label>
+						<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
+						<visible>!System.HasAlarm(shutdowntimer)</visible>
+						<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
+					</item>
+					<!-- Cancel Shutdown Timer -->
+					<item id="1">
+						<description>Cancel Shutdown Timer</description>
+						<label>Cancel Shutdown Timer</label>
+						<onclick>CancelAlarm(shutdowntimer)</onclick>
+						<visible>System.HasAlarm(shutdowntimer)</visible>
+					</item>
+					
+					<item id="1">
+                        <!-- ---------- -->
+                        <label>----------------</label>
+                        <onclick>-</onclick>
+                    </item>
+					<item>
+						<label>$LOCALIZE[13012]</label>
+						<onclick>Quit()</onclick>
+						<visible>System.ShowExitButton</visible>
+					</item>
+					<item id="1">
+                        <!-- ---------- -->
+                        <label>----------------</label>
+                        <onclick>-</onclick>
+                    </item>
+<!-- reboot, shutdown, shutdown timer -->
+				
                     <item id="1">
                         <!-- Shutdown -->
                         <label>31144</label>

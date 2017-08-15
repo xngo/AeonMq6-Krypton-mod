@@ -1346,7 +1346,7 @@
                         <content>
                             <item id="1">
                                 <!-- default -->
-                                <label></label>
+                                <label>-</label>
                                 <icon>$VAR[value_codecdefault]</icon>
                                 <onclick>Skin.SetString(custom_case,case_default)</onclick>
                                 <onclick>Skin.SetString(custom_codec,codec_default)</onclick>
@@ -1357,7 +1357,7 @@
                             </item>
                             <item id="2">
                                 <!-- bluray -->
-                                <label></label>
+                                <label>-</label>
                                 <icon>$VAR[value_codecbluray]</icon>
                                 <onclick>Skin.SetString(custom_case,case_bluray)</onclick>
                                 <onclick>Skin.SetString(custom_codec,codec_bluray)</onclick>
@@ -1368,7 +1368,7 @@
                             </item>
                             <item id="3">
                                 <!-- 3dbd -->
-                                <label></label>
+                                <label>-</label>
                                 <icon>$VAR[value_codec3dbd]</icon>
                                 <onclick>Skin.SetString(custom_case,case_3dbd)</onclick>
                                 <onclick>Skin.SetString(custom_codec,codec_3dbd)</onclick>
@@ -1379,7 +1379,7 @@
                             </item>
                             <item id="4">
                                 <!-- webtv -->
-                                <label></label>
+                                <label>-</label>
                                 <icon>$VAR[value_codecwebtv]</icon>
                                 <onclick>Skin.SetString(custom_case,case_webtv)</onclick>
                                 <onclick>Skin.SetString(custom_codec,codec_webtv)</onclick>
@@ -1390,7 +1390,7 @@
                             </item>
                             <item id="5">
                                 <!-- hdtv -->
-                                <label></label>
+                                <label>-</label>
                                 <icon>$VAR[value_codechdtv]</icon>
                                 <onclick>Skin.SetString(custom_case,case_hdtv)</onclick>
                                 <onclick>Skin.SetString(custom_codec,codec_hdtv)</onclick>
@@ -1401,7 +1401,7 @@
                             </item>
                             <item id="6">
                                 <!-- dvd -->
-                                <label></label>
+                                <label>-</label>
                                 <icon>$VAR[value_codecdvd]</icon>
                                 <onclick>Skin.SetString(custom_case,case_dvd)</onclick>
                                 <onclick>Skin.SetString(custom_codec,codec_dvd)</onclick>
@@ -1412,7 +1412,7 @@
                             </item>
                             <item id="7">
                                 <!-- set -->
-                                <label></label>
+                                <label>-</label>
                                 <icon>$VAR[value_codecset]</icon>
                                 <onclick>Skin.SetString(custom_case,case_set)</onclick>
                                 <onclick>Skin.SetString(custom_codec,codec_set)</onclick>
@@ -1423,7 +1423,7 @@
                             </item>
                             <item id="8">
                                 <!-- 4k -->
-                                <label></label>
+                                <label>-</label>
                                 <icon>$VAR[value_codec4k]</icon>
                                 <onclick>Skin.SetString(custom_case,case_4k)</onclick>
                                 <onclick>Skin.SetString(custom_codec,codec_4k)</onclick>
@@ -1821,7 +1821,7 @@
                             <orientation>horizontal</orientation>
                             <control type="button" id="600">
                                 <include>ButtonColor</include>
-                                <label></label>
+                                <label>-</label>
                                 <colordiffuse>FFFFFFFF</colordiffuse>
                                 <onfocus>Skin.SetString(glasscase,100)</onfocus>
                                 <onfocus>Skin.SetString(idglasscase,600)</onfocus>
@@ -1830,7 +1830,7 @@
                             </control>
                             <control type="button" id="601">
                                 <include>ButtonColor</include>
-                                <label></label>
+                                <label>-</label>
                                 <colordiffuse>95FFFFFF</colordiffuse>
                                 <onfocus>Skin.SetString(glasscase,95)</onfocus>
                                 <onfocus>Skin.SetString(idglasscase,601)</onfocus>
@@ -1839,7 +1839,7 @@
                             </control>
                             <control type="button" id="602">
                                 <include>ButtonColor</include>
-                                <label></label>
+                                <label>-</label>
                                 <colordiffuse>85FFFFFF</colordiffuse>
                                 <onfocus>Skin.SetString(glasscase,85)</onfocus>
                                 <onfocus>Skin.SetString(idglasscase,602)</onfocus>
@@ -1848,7 +1848,7 @@
                             </control>
                             <control type="button" id="603">
                                 <include>ButtonColor</include>
-                                <label></label>
+                                <label>-</label>
                                 <colordiffuse>75FFFFFF</colordiffuse>
                                 <onfocus>Skin.SetString(glasscase,75)</onfocus>
                                 <onfocus>Skin.SetString(idglasscase,603)</onfocus>
@@ -1857,7 +1857,7 @@
                             </control>
                             <control type="button" id="604">
                                 <include>ButtonColor</include>
-                                <label></label>
+                                <label>-</label>
                                 <colordiffuse>65FFFFFF</colordiffuse>
                                 <onfocus>Skin.SetString(glasscase,65)</onfocus>
                                 <onfocus>Skin.SetString(idglasscase,604)</onfocus>
@@ -1866,7 +1866,7 @@
                             </control>
                             <control type="button" id="605">
                                 <include>ButtonColor</include>
-                                <label></label>
+                                <label>-</label>
                                 <colordiffuse>55FFFFFF</colordiffuse>
                                 <onfocus>Skin.SetString(glasscase,55)</onfocus>
                                 <onfocus>Skin.SetString(idglasscase,605)</onfocus>
@@ -1875,7 +1875,7 @@
                             </control>
                             <control type="button" id="606">
                                 <include>ButtonColor</include>
-                                <label></label>
+                                <label>-</label>
                                 <colordiffuse>45FFFFFF</colordiffuse>
                                 <onfocus>Skin.SetString(glasscase,45)</onfocus>
                                 <onfocus>Skin.SetString(idglasscase,606)</onfocus>
@@ -1884,7 +1884,7 @@
                             </control>
                             <control type="button" id="607">
                                 <include>ButtonColor</include>
-                                <label></label>
+                                <label>-</label>
                                 <colordiffuse>35FFFFFF</colordiffuse>
                                 <onfocus>Skin.SetString(glasscase,35)</onfocus>
                                 <onfocus>Skin.SetString(idglasscase,607)</onfocus>
@@ -1893,7 +1893,7 @@
 							</control>
                             <control type="button" id="608">
                                 <include>ButtonColor</include>
-                                <label></label>
+                                <label>-</label>
                                 <colordiffuse>25FFFFFF</colordiffuse>
                                 <onfocus>Skin.SetString(glasscase,25)</onfocus>
                                 <onfocus>Skin.SetString(idglasscase,608)</onfocus>
@@ -1902,7 +1902,7 @@
                             </control>
                             <control type="button" id="609">
                                 <include>ButtonColor</include>
-                                <label></label>
+                                <label>-</label>
                                 <colordiffuse>15FFFFFF</colordiffuse>
                                 <onfocus>Skin.SetString(glasscase,15)</onfocus>
                                 <onfocus>Skin.SetString(idglasscase,609)</onfocus>
@@ -1911,7 +1911,7 @@
                             </control>
                             <control type="button" id="610">
                                 <include>ButtonColor</include>
-                                <label></label>
+                                <label>-</label>
                                 <colordiffuse>05FFFFFF</colordiffuse>
                                 <onfocus>Skin.SetString(glasscase,05)</onfocus>
                                 <onfocus>Skin.SetString(idglasscase,610)</onfocus>
@@ -2137,38 +2137,38 @@
                             </focusedlayout>
                             <content>
                                 <item id="1">
-                                    <label></label>
-                                    <icon>OverlayWatched.png</icon>
+                                    <label>-</label>
+                                    <icon>overlaywatched.png</icon>
                                     <onclick>Skin.SetString(stylewatched,0)</onclick>
                                 </item>
                                 <item id="2">
-                                    <label></label>
-                                    <icon>OverlayWatched_1.png</icon>
+                                    <label>-</label>
+                                    <icon>overlaywatched_1.png</icon>
                                     <onclick>Skin.SetString(stylewatched,1)</onclick>
                                 </item>
                                 <item id="3">
-                                    <label></label>
-                                    <icon>OverlayWatched_2.png</icon>
+                                    <label>-</label>
+                                    <icon>overlaywatched_2.png</icon>
                                     <onclick>Skin.SetString(stylewatched,2)</onclick>
                                 </item>
                                 <item id="4">
-                                    <label></label>
-                                    <icon>OverlayWatched_3.png</icon>
+                                    <label>-</label>
+                                    <icon>overlaywatched_3.png</icon>
                                     <onclick>Skin.SetString(stylewatched,3)</onclick>
                                 </item>
                                 <item id="5">
-                                    <label></label>
-                                    <icon>OverlayWatched_4.png</icon>
+                                    <label>-</label>
+                                    <icon>overlaywatched_4.png</icon>
                                     <onclick>Skin.SetString(stylewatched,4)</onclick>
                                 </item>
                                 <item id="6">
-                                    <label></label>
-                                    <icon>OverlayWatched_5.png</icon>
+                                    <label>-</label>
+                                    <icon>overlaywatched_5.png</icon>
                                     <onclick>Skin.SetString(stylewatched,5)</onclick>
                                 </item>
                                 <item id="7">
-                                    <label></label>
-                                    <icon>OverlayWatched_6.png</icon>
+                                    <label>-</label>
+                                    <icon>overlaywatched_6.png</icon>
                                     <onclick>Skin.SetString(stylewatched,6)</onclick>
                                 </item>
                             </content>
@@ -2919,7 +2919,7 @@
                         <orientation>horizontal</orientation>
                         <control type="button" id="551">
                             <include>ButtonColor</include>
-                            <label></label>
+                            <label>-</label>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                             <onfocus>Skin.SetString(glassfloor,100)</onfocus>
                             <onfocus>Skin.SetString(idglassfloor,551)</onfocus>
@@ -2929,7 +2929,7 @@
                         </control>
                         <control type="button" id="552">
                             <include>ButtonColor</include>
-                            <label></label>
+                            <label>-</label>
                             <colordiffuse>95FFFFFF</colordiffuse>
                             <onfocus>Skin.SetString(glassfloor,95)</onfocus>
                             <onfocus>Skin.SetString(idglassfloor,552)</onfocus>
@@ -2939,7 +2939,7 @@
                         </control>
                         <control type="button" id="553">
                             <include>ButtonColor</include>
-                            <label></label>
+                            <label>-</label>
                             <colordiffuse>85FFFFFF</colordiffuse>
                             <onfocus>Skin.SetString(glassfloor,85)</onfocus>
                             <onfocus>Skin.SetString(idglassfloor,553)</onfocus>
@@ -2949,7 +2949,7 @@
                         </control>
                         <control type="button" id="554">
                             <include>ButtonColor</include>
-                            <label></label>
+                            <label>-</label>
                             <colordiffuse>75FFFFFF</colordiffuse>
                             <onfocus>Skin.SetString(glassfloor,75)</onfocus>
                             <onfocus>Skin.SetString(idglassfloor,554)</onfocus>
@@ -2959,7 +2959,7 @@
                         </control>
                         <control type="button" id="555">
                             <include>ButtonColor</include>
-                            <label></label>
+                            <label>-</label>
                             <colordiffuse>65FFFFFF</colordiffuse>
                             <onfocus>Skin.SetString(glassfloor,65)</onfocus>
                             <onfocus>Skin.SetString(idglassfloor,555)</onfocus>
@@ -2969,7 +2969,7 @@
                         </control>
                         <control type="button" id="556">
                             <include>ButtonColor</include>
-                            <label></label>
+                            <label>-</label>
                             <colordiffuse>55FFFFFF</colordiffuse>
                             <onfocus>Skin.SetString(glassfloor,55)</onfocus>
                             <onfocus>Skin.SetString(idglassfloor,556)</onfocus>
@@ -2979,7 +2979,7 @@
                         </control>
                         <control type="button" id="557">
                             <include>ButtonColor</include>
-                            <label></label>
+                            <label>-</label>
                             <colordiffuse>45FFFFFF</colordiffuse>
                             <onfocus>Skin.SetString(glassfloor,45)</onfocus>
                             <onfocus>Skin.SetString(idglassfloor,557)</onfocus>
@@ -2989,7 +2989,7 @@
                         </control>
                         <control type="button" id="558">
                             <include>ButtonColor</include>
-                            <label></label>
+                            <label>-</label>
                             <colordiffuse>35FFFFFF</colordiffuse>
                             <onfocus>Skin.SetString(glassfloor,35)</onfocus>
                             <onfocus>Skin.SetString(idglassfloor,558)</onfocus>
@@ -2999,7 +2999,7 @@
                         </control>
                         <control type="button" id="559">
                             <include>ButtonColor</include>
-                            <label></label>
+                            <label>-</label>
                             <colordiffuse>25FFFFFF</colordiffuse>
                             <onfocus>Skin.SetString(glassfloor,25)</onfocus>
                             <onfocus>Skin.SetString(idglassfloor,559)</onfocus>
@@ -3009,7 +3009,7 @@
                         </control>
                         <control type="button" id="560">
                             <include>ButtonColor</include>
-                            <label></label>
+                            <label>-</label>
                             <colordiffuse>15FFFFFF</colordiffuse>
                             <onfocus>Skin.SetString(glassfloor,15)</onfocus>
                             <onfocus>Skin.SetString(idglassfloor,560)</onfocus>
@@ -3019,7 +3019,7 @@
                         </control>
                         <control type="button" id="561">
                             <include>ButtonColor</include>
-                            <label></label>
+                            <label>-</label>
                             <colordiffuse>05FFFFFF</colordiffuse>
                             <onfocus>Skin.SetString(glassfloor,05)</onfocus>
                             <onfocus>Skin.SetString(idglassfloor,561)</onfocus>
@@ -4264,7 +4264,7 @@
                         <orientation>horizontal</orientation>
                         <control type="button" id="261">
                             <include>ButtonColor</include>
-                            <label></label>
+                            <label>-</label>
                             <colordiffuse>FFFFFFFF</colordiffuse>
                             <onfocus>Skin.SetString(glassstyle,100)</onfocus>
                             <onfocus>Skin.SetString(idglassstyle,261)</onfocus>
@@ -4274,7 +4274,7 @@
                         </control>
                         <control type="button" id="262">
                             <include>ButtonColor</include>
-                            <label></label>
+                            <label>-</label>
                             <colordiffuse>95FFFFFF</colordiffuse>
                             <onfocus>Skin.SetString(glassstyle,95)</onfocus>
                             <onfocus>Skin.SetString(idglassstyle,262)</onfocus>
@@ -4284,7 +4284,7 @@
                         </control>
                         <control type="button" id="263">
                             <include>ButtonColor</include>
-                            <label></label>
+                            <label>-</label>
                             <colordiffuse>85FFFFFF</colordiffuse>
                             <onfocus>Skin.SetString(glassstyle,85)</onfocus>
                             <onfocus>Skin.SetString(idglassstyle,263)</onfocus>
@@ -4294,7 +4294,7 @@
                         </control>
                         <control type="button" id="264">
                             <include>ButtonColor</include>
-                            <label></label>
+                            <label>-</label>
                             <colordiffuse>75FFFFFF</colordiffuse>
                             <onfocus>Skin.SetString(glassstyle,75)</onfocus>
                             <onfocus>Skin.SetString(idglassstyle,264)</onfocus>
@@ -4304,7 +4304,7 @@
                         </control>
                         <control type="button" id="265">
                             <include>ButtonColor</include>
-                            <label></label>
+                            <label>-</label>
                             <colordiffuse>65FFFFFF</colordiffuse>
                             <onfocus>Skin.SetString(glassstyle,65)</onfocus>
                             <onfocus>Skin.SetString(idglassstyle,265)</onfocus>
@@ -4314,7 +4314,7 @@
                         </control>
                         <control type="button" id="266">
                             <include>ButtonColor</include>
-                            <label></label>
+                            <label>-</label>
                             <colordiffuse>55FFFFFF</colordiffuse>
                             <onfocus>Skin.SetString(glassstyle,55)</onfocus>
                             <onfocus>Skin.SetString(idglassstyle,266)</onfocus>
@@ -4324,7 +4324,7 @@
                         </control>
                         <control type="button" id="267">
                             <include>ButtonColor</include>
-                            <label></label>
+                            <label>-</label>
                             <colordiffuse>45FFFFFF</colordiffuse>
                             <onfocus>Skin.SetString(glassstyle,45)</onfocus>
                             <onfocus>Skin.SetString(idglassstyle,267)</onfocus>
@@ -4334,7 +4334,7 @@
                         </control>
                         <control type="button" id="268">
                             <include>ButtonColor</include>
-                            <label></label>
+                            <label>-</label>
                             <colordiffuse>35FFFFFF</colordiffuse>
                             <onfocus>Skin.SetString(glassstyle,35)</onfocus>
                             <onfocus>Skin.SetString(idglassstyle,268)</onfocus>
@@ -4344,7 +4344,7 @@
                         </control>
                         <control type="button" id="269">
                             <include>ButtonColor</include>
-                            <label></label>
+                            <label>-</label>
                             <colordiffuse>25FFFFFF</colordiffuse>
                             <onfocus>Skin.SetString(glassstyle,25)</onfocus>
                             <onfocus>Skin.SetString(idglassstyle,269)</onfocus>
@@ -4354,7 +4354,7 @@
                         </control>
                         <control type="button" id="270">
                             <include>ButtonColor</include>
-                            <label></label>
+                            <label>-</label>
                             <colordiffuse>15FFFFFF</colordiffuse>
                             <onfocus>Skin.SetString(glassstyle,15)</onfocus>
                             <onfocus>Skin.SetString(idglassstyle,270)</onfocus>
@@ -4364,7 +4364,7 @@
                         </control>
                         <control type="button" id="271">
                             <include>ButtonColor</include>
-                            <label></label>
+                            <label>-</label>
                             <colordiffuse>05FFFFFF</colordiffuse>
                             <onfocus>Skin.SetString(glassstyle,05)</onfocus>
                             <onfocus>Skin.SetString(idglassstyle,271)</onfocus>
@@ -5618,21 +5618,21 @@
                         <content>
                             <item id="1">
                                 <!-- disco de audio -->
-                                <label></label>
+                                <label>-</label>
                                 <icon>$VAR[value_audiodisc]</icon>
                                 <onclick>Skin.SetString(custom_disc,discaudio)</onclick>
                                 <onclick>SetFocus(12024)</onclick>
                             </item>
                             <item id="2">
                                 <!-- disco de video -->
-                                <label></label>
+                                <label>-</label>
                                 <icon>$VAR[value_videodisc]</icon>
                                 <onclick>Skin.SetString(custom_disc,discvideo)</onclick>
                                 <onclick>SetFocus(12024)</onclick>
                             </item>
                             <item id="3">
                                 <!-- New disc audio -->
-                                <label></label>
+                                <label>-</label>
                                 <icon>$VAR[value_newdisc]</icon>
                                 <onclick>Skin.SetString(custom_disc,newdisc)</onclick>
                                 <onclick>SetFocus(12024)</onclick>
@@ -5729,32 +5729,32 @@
                             </focusedlayout>
                             <content>
                                 <item id="1">
-                                    <label></label>
+                                    <label>-</label>
                                     <icon>cdart.png</icon>
                                     <onclick>Skin.SetString($INFO[skin.string(custom_disc)],0)</onclick>
                                 </item>
                                 <item id="2">
-                                    <label></label>
+                                    <label>-</label>
                                     <icon>cdart_1.png</icon>
                                     <onclick>Skin.SetString($INFO[skin.string(custom_disc)],1)</onclick>
                                 </item>
                                 <item id="3">
-                                    <label></label>
+                                    <label>-</label>
                                     <icon>cdart_2.png</icon>
                                     <onclick>Skin.SetString($INFO[skin.string(custom_disc)],2)</onclick>
                                 </item>
                                 <item id="4">
-                                    <label></label>
+                                    <label>-</label>
                                     <icon>cdart_3.png</icon>
                                     <onclick>Skin.SetString($INFO[skin.string(custom_disc)],3)</onclick>
                                 </item>
                                 <item id="5">
-                                    <label></label>
+                                    <label>-</label>
                                     <icon>cdart_4.png</icon>
                                     <onclick>Skin.SetString($INFO[skin.string(custom_disc)],4)</onclick>
                                 </item>
                                 <item id="6">
-                                    <label></label>
+                                    <label>-</label>
                                     <icon fallback="cdart_diffuse.png">$VAR[value_mydisc]</icon>
                                     <onclick condition="Container(12024).HasFocus(1) + !String.IsEmpty(Skin.String(customaudiodisc))">Skin.SetString($INFO[skin.string(custom_disc)],5)</onclick>
                                     <onclick condition="Container(12024).HasFocus(1) + String.IsEmpty(Skin.String(customaudiodisc))">SetFocus(1253)</onclick>
@@ -6072,86 +6072,86 @@
                     <item id="17">
                         <!-- Menu principal - 0 -->
                         <label>31410</label>
-                        <icon></icon>
+                        <icon>-</icon>
                         <onclick>SetFocus(10000)</onclick>
                     </item>
                     <item id="18">
                         <!-- Menu principal widgets - 1 -->
                         <label>31249</label>
-                        <icon></icon>
+                        <icon>-</icon>
                         <onclick>SetFocus(10001)</onclick>
                     </item>
                     <item id="19">
                         <!-- Mobilia - 2 -->
                         <label>31398</label>
-                        <icon></icon>
+                        <icon>-</icon>
                         <onclick>SetFocus(9016)</onclick>
                     </item>
                     <item id="31">
                         <!-- Estojo - 3 -->
                         <label>31297</label>
-                        <icon></icon>
+                        <icon>-</icon>
                         <onclick>SetFocus(10023)</onclick>
                     </item>
                     <item id="33">
                         <!-- Etiqueta assistido - 4 -->
                         <label>31485</label>
-                        <icon></icon>
+                        <icon>-</icon>
                         <onclick>SetFocus(10027)</onclick>
                     </item>
                     <item id="35">
                         <!-- Etiquetas de midia - 5 -->
                         <label>31482</label>
-                        <icon></icon>
+                        <icon>-</icon>
                         <onclick>SetFocus($INFO[skin.string(idcolorflags)])</onclick>
                     </item>
                     <item id="20">
                         <!-- Cores - 6 -->
                         <label>31404</label>
-                        <icon></icon>
+                        <icon>-</icon>
                         <onclick>SetFocus($INFO[skin.string(idcolorheader)])</onclick>
                     </item>
                     <item id="23">
                         <!-- Estilos - 7 -->
                         <label>31400</label>
-                        <icon></icon>
+                        <icon>-</icon>
                         <onclick>SetFocus(10031)</onclick>
                     </item>
                     <item id="24">
                         <!-- Fontes - 8 -->
                         <label>31136</label>
-                        <icon></icon>
+                        <icon>-</icon>
                         <onclick>Skin.SetBool(fonte)</onclick>
                         <onclick>SetFocus(1200)</onclick>
                     </item>
                     <item id="22">
                         <!-- Temas - 9 -->
                         <label>31893</label>
-                        <icon></icon>
+                        <icon>-</icon>
                         <onclick>SetFocus(10011)</onclick>
                     </item>
                     <item id="36">
                         <!-- Pacote extra - 10 -->
                         <label>31402</label>
-                        <icon></icon>
+                        <icon>-</icon>
                         <onclick>SetFocus(10032)</onclick>
                     </item>
                     <item id="34">
                         <!-- Arte de Disco - 11 -->
                         <label>31096</label>
-                        <icon></icon>
+                        <icon>-</icon>
                         <onclick>SetFocus(12024)</onclick>
                     </item>
                     <item id="16">
                         <!-- Skin Geral - 12 -->
                         <label>31375</label>
-                        <icon></icon>
+                        <icon>-</icon>
                         <onclick>SetFocus(10021)</onclick>
                     </item>
                     <item id="32">
                         <!-- Restaurar ajustes - 13 -->
                         <label>31450</label>
-                        <icon></icon>
+                        <icon>-</icon>
                         <onclick>SetFocus(10022)</onclick>
                     </item>
                 </content>

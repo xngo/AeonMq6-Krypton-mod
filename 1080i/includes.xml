@@ -1076,6 +1076,11 @@
 			<texture fallback="blanc.png">$VAR[value_mpaa]</texture>
 			<visible>!String.IsEmpty(ListItem.Mpaa)</visible>
 		</control>
+		<!-- Mpaa -->
+<!-- 		<control type="label">
+			<label>$INFO[ListItem.Mpaa]</label>
+			<visible>!String.IsEmpty(ListItem.Mpaa)</visible>
+		</control> -->
 		<control type="image">
 			<include>FlagSeparator</include>
 			<visible>!String.IsEmpty(ListItem.Mpaa)</visible>

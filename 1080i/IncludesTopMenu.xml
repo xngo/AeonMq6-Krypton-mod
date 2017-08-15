@@ -983,6 +983,22 @@
 					<selected>!Skin.HasSetting(nosetsdiscart)</selected>
 					<visible>String.IsEqual(Container.Viewmode,SETS) + [Container.Content(movies) | Container.Content(sets)]</visible>
 				</control>
+<!-- ngo hinzugefügt -->				
+				<control type="radiobutton" id="9298">
+					<include>TopMenuRadioButton</include>
+					<label>31508</label>
+					<onclick>Skin.ToggleSetting(noartsetsvideo)</onclick>
+					<selected>!Skin.HasSetting(noartsetsvideo)</selected>
+					<visible>String.IsEqual(Container.Viewmode,SETS)</visible>
+				</control>
+				<control type="radiobutton" id="9299">
+					<include>TopMenuRadioButton</include>
+					<label>Scroll Info aus (noch keine funktion)</label>
+					<onclick>Skin.ToggleSetting(noscrollsetsinfo)</onclick>
+					<selected>!Skin.HasSetting(noscrollsetsinfo)</selected>
+					<visible>String.IsEqual(Container.Viewmode,SETS)</visible>
+				</control>
+<!-- ngo hinzugefügt -->
 				<!-- ShowCase -->
 				<control type="radiobutton" id="92100">
 					<include>TopMenuRadioButton</include>

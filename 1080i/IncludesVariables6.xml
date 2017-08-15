@@ -9,6 +9,20 @@
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(widgets),dualwidget1)">plugin://service.library.data.provider?type=$INFO[Skin.String(widget1a)]+$INFO[Skin.String(widget1b)]&amp;reload=$INFO[Window(0).Property($INFO[Skin.String(widget1a)])]$INFO[Window(0).Property($INFO[Skin.String(widget1b)])]</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(widgets),dualwidget2)">plugin://service.library.data.provider?type=$INFO[Skin.String(widget2a)]+$INFO[Skin.String(widget2b)]&amp;reload=$INFO[Window(0).Property($INFO[Skin.String(widget2a)])]$INFO[Window(0).Property($INFO[Skin.String(widget2b)])]</value>
 	</variable>
+	
+	
+<!-- ngo hinzugefügt icon videolist /bluray,bluray rip, 3d etc -->
+	<variable name="VideoResolutionFlag">
+        <value condition="!Window.IsVisible(VideoPlaylist) + !stringcompare(ListItem.Label,..) + ListItem.IsFolder + SubString(Container.FolderPath,videodb://,left)">icons/videolist/set.png</value>
+        <value condition="ListItem.IsStereoscopic">icons/videolist/3dbd.png</value>
+		<!-- geändert -->
+		<value condition="[substring(ListItem.FilenameAndPath,bluray) | substring(ListItem.FilenameAndPath,bd25) | substring(ListItem.FilenameAndPath,bd50)]">icons/videolist/bluray.png</value>
+		<value condition="[substring(ListItem.FilenameAndPath,bdrip)]">icons/videolist/blurayrip.png</value>
+		<!--############-->
+        <value>$INFO[ListItem.VideoResolution,icons/videolist/,.png]</value>
+    </variable>
+<!-- ngo hinzugefügt icon videolist /bluray,bluray rip, 3d etc -->
+	
 	<variable name="Sub_GoTo">
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(subid),movies)">6001</value>
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(subid),tvshows)">6002</value>
@@ -275,13 +289,13 @@
 		<!-- color 24 graphite -->
 	</variable>
 	<variable name="value_watchedstyle">
-		<value condition="String.Contains(skin.string(stylewatched),0)">OverlayWatched.png</value>
-		<value condition="String.Contains(skin.string(stylewatched),1)">OverlayWatched_1.png</value>
-		<value condition="String.Contains(skin.string(stylewatched),2)">OverlayWatched_2.png</value>
-		<value condition="String.Contains(skin.string(stylewatched),3)">OverlayWatched_3.png</value>
-		<value condition="String.Contains(skin.string(stylewatched),4)">OverlayWatched_4.png</value>
-		<value condition="String.Contains(skin.string(stylewatched),5)">OverlayWatched_5.png</value>
-		<value condition="String.Contains(skin.string(stylewatched),6)">OverlayWatched_6.png</value>
+		<value condition="String.Contains(skin.string(stylewatched),0)">overlaywatched.png</value>
+		<value condition="String.Contains(skin.string(stylewatched),1)">overlaywatched_1.png</value>
+		<value condition="String.Contains(skin.string(stylewatched),2)">overlaywatched_2.png</value>
+		<value condition="String.Contains(skin.string(stylewatched),3)">overlaywatched_3.png</value>
+		<value condition="String.Contains(skin.string(stylewatched),4)">overlaywatched_4.png</value>
+		<value condition="String.Contains(skin.string(stylewatched),5)">overlaywatched_5.png</value>
+		<value condition="String.Contains(skin.string(stylewatched),6)">overlaywatched_6.png</value>
 	</variable>
 	<variable name="value_skinstatus_watchedcolor">
 		<value condition="String.Contains(skin.string(colorwatched),nocolor)">$LOCALIZE[31648]</value>
@@ -2866,11 +2880,11 @@ Ultra)]">$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
 		<value condition="String.Contains(ListItem.Mpaa,TV-PG)">flags/mpaa/TV-PG_Certificate_US.png</value>
 		<value condition="String.Contains(ListItem.Mpaa,TV-14)">flags/mpaa/TV-14_Certificate_US.png</value>
 		<value condition="String.Contains(ListItem.Mpaa,TV-MA)">flags/mpaa/TV-MA_Certificate_US.png</value>
-		<value condition="String.Contains(ListItem.Mpaa,FSK0) | String.Contains(ListItem.Mpaa,Rated 0) | String.Contains(ListItem.Mpaa,FSK 0) | String.Contains(ListItem.Mpaa,FSK o.A.) | String.Contains(ListItem.Mpaa,o.A.) | String.Contains(ListItem.Mpaa,ab 0) | String.Contains(ListItem.Mpaa,Germany:0) | String.Contains(ListItem.Mpaa,Germany:o.Al.)">flags/mpaa/FSK-0.png</value>
-		<value condition="String.Contains(ListItem.Mpaa,FSK6) | String.Contains(ListItem.Mpaa,Rated 6) | String.Contains(ListItem.Mpaa,FSK 6) | String.Contains(ListItem.Mpaa,ab 6) | String.Contains(ListItem.Mpaa,Germany:6)">flags/mpaa/FSK-6.png</value>
-		<value condition="String.Contains(ListItem.Mpaa,FSK12) | String.Contains(ListItem.Mpaa,Rated 12) | String.Contains(ListItem.Mpaa,FSK 12) | String.Contains(ListItem.Mpaa,ab 12) | String.Contains(ListItem.Mpaa,Germany:12)">flags/mpaa/FSK-12.png</value>
-		<value condition="String.Contains(ListItem.Mpaa,FSK16) | String.Contains(ListItem.Mpaa,Rated 16) | String.Contains(ListItem.Mpaa,FSK 16) | String.Contains(ListItem.Mpaa,ab 16) | String.Contains(ListItem.Mpaa,Germany:16)">flags/mpaa/FSK-16.png</value>
-		<value condition="String.Contains(ListItem.Mpaa,FSK18) | String.Contains(ListItem.Mpaa,Rated 18) | String.Contains(ListItem.Mpaa,FSK 18) | String.Contains(ListItem.Mpaa,ab 18) | String.Contains(ListItem.Mpaa,Germany:18)">flags/mpaa/FSK-18.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,FSK0) | String.Contains(ListItem.Mpaa,Rated 0) | String.Contains(ListItem.Mpaa,FSK 0) | String.Contains(ListItem.Mpaa,FSK o.A.) | String.Contains(ListItem.Mpaa,o.A.) | String.Contains(ListItem.Mpaa,ab 0) | String.Contains(ListItem.Mpaa,Germany:0) | String.Contains(ListItem.Mpaa,Germany:o.Al.)">flags/mpaa/fsk-0.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,FSK6) | String.Contains(ListItem.Mpaa,Rated 6) | String.Contains(ListItem.Mpaa,FSK 6) | String.Contains(ListItem.Mpaa,ab 6) | String.Contains(ListItem.Mpaa,Germany:6)">flags/mpaa/fsk-6.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,FSK12) | String.Contains(ListItem.Mpaa,Rated 12) | String.Contains(ListItem.Mpaa,FSK 12) | String.Contains(ListItem.Mpaa,ab 12) | String.Contains(ListItem.Mpaa,Germany:12)">flags/mpaa/fsk-12.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,FSK16) | String.Contains(ListItem.Mpaa,Rated 16) | String.Contains(ListItem.Mpaa,FSK 16) | String.Contains(ListItem.Mpaa,ab 16) | String.Contains(ListItem.Mpaa,Germany:16)">flags/mpaa/fsk-16.png</value>
+		<value condition="String.Contains(ListItem.Mpaa,FSK18) | String.Contains(ListItem.Mpaa,Rated 18) | String.Contains(ListItem.Mpaa,FSK 18) | String.Contains(ListItem.Mpaa,ab 18) | String.Contains(ListItem.Mpaa,Germany:18)">flags/mpaa/fsk-18.png</value>
 		<value condition="String.Contains(ListItem.Mpaa,HU-KN)">flags/mpaa/HU_KN.png</value>
 		<value condition="String.Contains(ListItem.Mpaa,HU-12)">flags/mpaa/HU_12.png</value>
 		<value condition="String.Contains(ListItem.Mpaa,HU-16)">flags/mpaa/HU_16.png</value>
@@ -5979,6 +5993,11 @@ Ultra)]">$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
 	</variable>
 	<variable name="value_plotmoviesets">
 		<value condition="Control.HasFocus(65) | Control.HasFocus(80)">$VAR[value_plot]</value>
+<!-- ngo hinzugefügt plot sichtbar bei:85 / 95-->	
+	<value condition="Control.HasFocus(85) | Control.HasFocus(95)">$VAR[value_plot]</value>	
+<!-- ngo hinzugefügt plot sichtbar bei set ansicht komplett-->
+		<value condition="String.IsEqual(Container.Viewmode,SETS)">$VAR[value_plot]</value>
+<!-- ngo hinzugefügt manuel scroll plot set ansicht komplett-->
 		<value condition="Control.HasFocus(5801)">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</value>
 	</variable>
 	<variable name="value_pvrstatushome">
