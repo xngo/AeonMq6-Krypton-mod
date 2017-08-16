@@ -242,10 +242,10 @@
             </control>
             <control type="grouplist">
                 <!-- Etiquetas -->
-                <left>375</left>
+                <left>320</left>
                 <top>956</top>
                 <orientation>horizontal</orientation>
-                <itemgap>20</itemgap>
+                <itemgap>10</itemgap>
                 <control type="image">
                     <!-- Flags -->
                     <include>FlagImage</include>
@@ -274,6 +274,11 @@
                     <!-- Channels -->
                     <include>FlagImage</include>
                     <texture>$INFO[VideoPlayer.AudioChannels,flags/audiochannels/,.png]</texture>
+                </control>
+                <control type="image">
+                    <!-- AudioLanguage -->
+                    <include>FlagImage</include>
+                    <texture>$INFO[VideoPlayer.AudioLanguage,flags/country/,.png]</texture>
                 </control>
             </control>
             <control type="image">

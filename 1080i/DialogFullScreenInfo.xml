@@ -233,10 +233,10 @@
             </control>
             <control type="grouplist">
                 <!-- Etiquetas -->
-                <left>345</left>
+                <left>325</left>
                 <top>1008</top>
                 <orientation>horizontal</orientation>
-                <itemgap>20</itemgap>
+                <itemgap>10</itemgap>
                 <control type="image">
                     <!-- Flags -->
                     <include>FlagImage</include>
@@ -265,6 +265,11 @@
                     <!-- Channels -->
                     <include>FlagImage</include>
                     <texture>$INFO[VideoPlayer.AudioChannels,flags/audiochannels/,.png]</texture>
+                </control>
+                <control type="image">
+                    <!-- AudioLanguage -->
+                    <include>FlagImage</include>
+                    <texture>$INFO[VideoPlayer.AudioLanguage,flags/country/,.png]</texture>
                 </control>
             </control>
             <control type="image">
@@ -362,12 +367,12 @@
                 <!-- Titulo enredo -->
                 <left>330</left>
                 <top>670</top>
-                <width>450</width>
+                <width>550</width>
                 <height>38</height>
                 <align>left</align>
                 <font>Font_17</font>
                 <textcolor>$VAR[value_headercolor]</textcolor>
-                <label>$INFO[VideoPlayer.Title]</label>
+                <label>$INFO[VideoPlayer.Title] - ($INFO[VideoPlayer.Year])</label>
             </control>
             <control type="textbox">
                 <!-- Plot -->
