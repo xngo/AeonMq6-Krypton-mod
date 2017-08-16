@@ -20,7 +20,7 @@
         <textcolor>FFFFFAF0</textcolor>
         <scroll>true</scroll>
     </include>
-	<include name="SetsValue_noscroll">
+    <include name="SetsValue_noscroll">
         <width>423</width>
         <height>20</height>
         <aligny>top</aligny>
@@ -29,7 +29,7 @@
         <textcolor>FFFFFAF0</textcolor>
         <scroll>false</scroll>
     </include>
-	
+
     <include name="ViewSets">
         <control type="group">
             <!-- default group -->
@@ -72,10 +72,10 @@
                 <colordiffuse>$VAR[value_texturecolor]</colordiffuse>
                 <animation effect="fade" end="85" condition="true">Conditional</animation>
             </control>
-			<!-- SetsLabel scroll -->
+            <!-- SetsLabel scroll -->
             <control type="group">
                 <visible>!String.IsEqual(ListItem.Label,..)</visible>
-				<visible>Window.IsActive(videos) + !Skin.HasSetting(noscrollsetsinfo)</visible>
+                <visible>Window.IsActive(videos) + !Skin.HasSetting(noscrollsetsinfo)</visible>
                 <control type="label">
                     <include>SetsLabel</include>
                     <left>45</left>
@@ -165,10 +165,10 @@
                     <label>$INFO[ListItem.Director]$INFO[Window(Home).Property(SkinHelper.ListItem.Director)]</label>
                 </control>
             </control>
-			<!-- SetsLabel noscroll -->
+            <!-- SetsLabel noscroll -->
             <control type="group">
                 <visible>!String.IsEqual(ListItem.Label,..)</visible>
-				<visible>Window.IsActive(videos) + Skin.HasSetting(noscrollsetsinfo)</visible>
+                <visible>Window.IsActive(videos) + Skin.HasSetting(noscrollsetsinfo)</visible>
                 <control type="label">
                     <include>SetsLabel</include>
                     <left>45</left>
@@ -298,254 +298,228 @@
                 <autoscroll delay="8000" time="2000" repeat="8000">!Skin.HasSetting(noinfoplotscroll)</autoscroll>
                 <visible>Control.HasFocus(5801)</visible>
             </control> -->
-			
-<!-- ngo hinzugefügt manuel scroll plot in set ansicht-->	
-	    <control type="group">
-         <left>45</left>
-        <top>652</top>
-		<width>909</width>
-        <height>294</height> 
- 
-					<visible>Control.HasFocus(5801)</visible>
-            <control type="textbox">
-                <!-- Plot -->
-                <left>0</left>
-                <top>0</top>
-                <width>909</width>
-                <height>294</height>
-                <align>justify</align>
-                <font>Font_18A</font>
-                <label>$VAR[value_plotmoviesets]</label>
-                <textcolor>FFFFFAF0</textcolor>
-				<pagecontrol>95</pagecontrol>
-                <autoscroll delay="8000" time="2000" repeat="8000">!Skin.HasSetting(noinfoplotscroll)</autoscroll>
-                <visible>!Control.HasFocus(5801)</visible>
+            
+            <control type="image">
+                <left>1350</left>
+                <top>435</top>
+                <width>45</width>
+                <height>543</height>
+                <texture>shadow.png</texture>
+                <colordiffuse>C3FFFFFF</colordiffuse>
             </control>
-            <control type="textbox">
-                <!-- Plot -->
-                <left>0</left>
-                <top>0</top>
-                <width>909</width>
-                <height>294</height>
-                <align>justify</align>
-                <font>Font_18A</font>
-                <label>$INFO[Container(5801).ListItem.Property(Plot)]</label>
-                <textcolor>FFFFFAF0</textcolor>
-				<pagecontrol>95</pagecontrol>
-                <autoscroll delay="8000" time="2000" repeat="8000">!Skin.HasSetting(noinfoplotscroll)</autoscroll>
-                <visible>Control.HasFocus(5801)</visible>
+            <control type="image">
+                <left>1350</left>
+                <top>436</top>
+                <width>3</width>
+                <height>540</height>
+                <texture>separator_v.png</texture>
             </control>
-
-	
-			<control type="scrollbar" id="95">
-                <include>ScrollBar_Vertical</include>
-                <left>960</left>
+<!-- ngo hinzugefügt manuel scroll plot in set ansicht-->
+            <control type="group">
+                <left>45</left>
                 <top>652</top>
-                <height>0</height>
-                <onleft>0</onleft> 
-                <onright>65</onright>
-                <include>Animation_Fade</include>
-                <visible allowhiddenfocus="true">String.IsEqual(Container.Viewmode,SETS) + Control.HasFocus(95)</visible>
-            </control>
-			
-			
-			<control type="button" id="105">
-				<description>My first button control</description>
-				<left>900</left>
-				<top>0</top>
-				<width>40</width>
-				<height>40</height>
-				<visible>true</visible>
-				<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-				<texturefocus colordiffuse="$VAR[value_headercolor]">arrow.png</texturefocus>
-				<texturenofocus colordiffuse="FFFFAAFF">arrow_up.png</texturenofocus>
-				<label>-</label>
-				<wrapmultiline>true</wrapmultiline>
-				<font>font12</font>
-				<textcolor>FFFFFFFF</textcolor>
-				<focusedcolor>FFFFFFFF</focusedcolor>
-				<disabledcolor>80FFFFFF</disabledcolor>
-				<invalidcolor>FFFFFFFF</invalidcolor>			 
-				<align></align>
-				<aligny></aligny>
-				<textoffsetx></textoffsetx>
-				<textoffsety></textoffsety>
-				<pulseonselect></pulseonselect>
-				<onclick>pageup(95)</onclick>
-				<onfocus>-</onfocus>
-				<onunfocus>-</onunfocus>
-				<onup>85</onup>
-				<ondown>115</ondown>
-				<onleft>9900</onleft>
-				<onright>85</onright>
-			</control>
-			
-			<control type="button" id="115">
-				<description>My first button control</description>
-                <left>900</left>
-                <top>62</top>
-				<width>40</width>
-				<height>40</height>
-				<visible>true</visible>
-				<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-				<texturefocus flipy="true" colordiffuse="$VAR[value_headercolor]">arrow.png</texturefocus>
-				<texturenofocus colordiffuse="FFFFAAFF">arrow_down.png</texturenofocus>
-				<label>-</label>
-				<wrapmultiline>true</wrapmultiline>
-				<font>font12</font>
-				<textcolor>FFFFFFFF</textcolor>
-				<focusedcolor>FFFFFFFF</focusedcolor>
-				<disabledcolor>80FFFFFF</disabledcolor>
-				<invalidcolor>FFFFFFFF</invalidcolor>			 
-				<align></align>
-				<aligny></aligny>
-				<textoffsetx></textoffsetx>
-				<textoffsety></textoffsety>
-				<pulseonselect></pulseonselect>
-				<onclick>pagedown(95)</onclick>
-				<onfocus>-</onfocus>
-				<onunfocus>-</onunfocus>
-				<onup>105</onup>
-				<ondown>85</ondown>
-				<onleft>9900</onleft>
-				<onright>85</onright>
-			</control>
-		</control>				
-<!-- ngo hinzugefügt manuel scroll plot nicht sets-->	
-	    <control type="group">
-<!--         <left>45</left>
-        <top>652</top>
-		<width>909</width>
-        <height>294</height> -->
-		            <left>1370</left>
-                    <top>456</top>
-                    <width>570</width>
-                    <height>540</height>
-					<visible>!Control.HasFocus(5801)+String.IsEmpty(Container(5801))</visible>
-			
-                        <control type="label">
-                            <left>30</left>
-                            <top>0</top>
-                            <height>60</height>
-                            <width>870</width>
-                            <aligny>center</aligny>
-                            <font>Font_22</font>
-                            <label>$INFO[ListItem.Label]</label>
-                            <include>listcolor</include>
-                        </control>
-			            <control type="image">
-                <left>0</left>
-                <top>65</top>
-                <width>560</width>
-                <height>3</height>
-                <texture>separator.png</texture>
-            </control>
-            <control type="textbox">
-                <!-- Plot -->
-                <left>0</left>
-                <top>70</top>
-                    <width>520</width>
-                    <height>540</height>
-                <align>justify</align>
-                <font>Font_18A</font>
-                <label>$VAR[value_plotmoviesets]</label>
-                <textcolor>FFFFFAF0</textcolor>
-				<pagecontrol>95</pagecontrol>
-                <autoscroll delay="8000" time="2000" repeat="8000">!Skin.HasSetting(noinfoplotscroll)</autoscroll>
-                <visible>!Control.HasFocus(5801)</visible>
-            </control>
-            <control type="textbox">
-                <!-- Plot -->
-                <left>0</left>
-                <top>0</top>
                 <width>909</width>
-                <height>294</height>
-                <align>justify</align>
-                <font>Font_18A</font>
-                <label>$INFO[Container(5801).ListItem.Property(Plot)]</label>
-                <textcolor>FFFFFAF0</textcolor>
-                <autoscroll delay="8000" time="2000" repeat="8000">!Skin.HasSetting(noinfoplotscroll)</autoscroll>
+                <height>294</height> 
                 <visible>Control.HasFocus(5801)</visible>
-            </control>
+                    <control type="textbox">
+                    <!-- Plot -->
+                        <left>0</left>
+                        <top>0</top>
+                        <width>909</width>
+                        <height>294</height>
+                        <align>justify</align>
+                        <font>Font_18A</font>
+                        <label>$INFO[Container(5801).ListItem.Property(Plot)]</label>
+                        <textcolor>FFFFFAF0</textcolor>
+                        <pagecontrol>95</pagecontrol>
+                        <autoscroll delay="8000" time="2000" repeat="8000">!Skin.HasSetting(noinfoplotscroll)</autoscroll>
+                        <visible>Control.HasFocus(5801)</visible>
+                    </control>
 
-	
-			<control type="scrollbar" id="95">
-                <include>ScrollBar_Vertical</include>
-                <left>960</left>
-                <top>652</top>
-                <height>0</height>
-                <onleft>0</onleft> 
-                <onright>65</onright>
-                <include>Animation_Fade</include>
-                <visible allowhiddenfocus="true">String.IsEqual(Container.Viewmode,SETS) + Control.HasFocus(95)</visible>
+                    <control type="scrollbar" id="95">
+                        <include>ScrollBar_Vertical</include>
+                        <left>960</left>
+                        <top>652</top>
+                        <height>0</height>
+                        <onleft>0</onleft> 
+                        <onright>65</onright>
+                        <include>Animation_Fade</include>
+                        <visible allowhiddenfocus="true">String.IsEqual(Container.Viewmode,SETS) + Control.HasFocus(95)</visible>
+                    </control>
+                    <control type="button" id="105">
+                        <description>My first button control</description>
+                        <left>900</left>
+                        <top>0</top>
+                        <width>40</width>
+                        <height>40</height>
+                        <visible>true</visible>
+                        <colordiffuse>$VAR[value_headercolor]</colordiffuse>
+                        <texturefocus colordiffuse="$VAR[value_headercolor]">arrow.png</texturefocus>
+                        <texturenofocus colordiffuse="FFFFAAFF">arrow_up.png</texturenofocus>
+                        <label>-</label>
+                        <wrapmultiline>true</wrapmultiline>
+                        <font>font12</font>
+                        <textcolor>FFFFFFFF</textcolor>
+                        <focusedcolor>FFFFFFFF</focusedcolor>
+                        <disabledcolor>80FFFFFF</disabledcolor>
+                        <invalidcolor>FFFFFFFF</invalidcolor>
+                        <align></align>
+                        <aligny></aligny>
+                        <textoffsetx></textoffsetx>
+                        <textoffsety></textoffsety>
+                        <pulseonselect></pulseonselect>
+                        <onclick>pageup(95)</onclick>
+                        <onfocus>-</onfocus>
+                        <onunfocus>-</onunfocus>
+                        <onup>85</onup>
+                        <ondown>115</ondown>
+                        <onleft>9900</onleft>
+                        <onright>85</onright>
+                    </control>
+                    <control type="button" id="115">
+                        <description>My first button control</description>
+                        <left>900</left>
+                        <top>62</top>
+                        <width>40</width>
+                        <height>40</height>
+                        <visible>true</visible>
+                        <colordiffuse>$VAR[value_headercolor]</colordiffuse>
+                        <texturefocus flipy="true" colordiffuse="$VAR[value_headercolor]">arrow.png</texturefocus>
+                        <texturenofocus colordiffuse="FFFFAAFF">arrow_down.png</texturenofocus>
+                        <label>-</label>
+                        <wrapmultiline>true</wrapmultiline>
+                        <font>font12</font>
+                        <textcolor>FFFFFFFF</textcolor>
+                        <focusedcolor>FFFFFFFF</focusedcolor>
+                        <disabledcolor>80FFFFFF</disabledcolor>
+                        <invalidcolor>FFFFFFFF</invalidcolor>
+                        <align></align>
+                        <aligny></aligny>
+                        <textoffsetx></textoffsetx>
+                        <textoffsety></textoffsety>
+                        <pulseonselect></pulseonselect>
+                        <onclick>pagedown(95)</onclick>
+                        <onfocus>-</onfocus>
+                        <onunfocus>-</onunfocus>
+                        <onup>105</onup>
+                        <ondown>85</ondown>
+                        <onleft>9900</onleft>
+                        <onright>85</onright>
+                    </control>
             </control>
-			
-			
-			<control type="button" id="105">
-				<description>My first button control</description>
-				<left>-40</left>
-				<top>0</top>
-				<width>40</width>
-				<height>40</height>
-				<visible>true</visible>
-				<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-				<texturefocus colordiffuse="$VAR[value_headercolor]">arrow.png</texturefocus>
-				<texturenofocus colordiffuse="FFFFAAFF">arrow_up.png</texturenofocus>
-				<label>-</label>
-				<wrapmultiline>true</wrapmultiline>
-				<font>font12</font>
-				<textcolor>FFFFFFFF</textcolor>
-				<focusedcolor>FFFFFFFF</focusedcolor>
-				<disabledcolor>80FFFFFF</disabledcolor>
-				<invalidcolor>FFFFFFFF</invalidcolor>			 
-				<align></align>
-				<aligny></aligny>
-				<textoffsetx></textoffsetx>
-				<textoffsety></textoffsety>
-				<pulseonselect></pulseonselect>
-				<onclick>pageup(95)</onclick>
-				<onfocus>-</onfocus>
-				<onunfocus>-</onunfocus>
-				<onup>85</onup>
-				<ondown>115</ondown>
-				<onleft>9900</onleft>
-				<onright>85</onright>
-			</control>
-			
-			<control type="button" id="115">
-				<description>My first button control</description>
-                <left>-40</left>
-                <top>82</top>
-				<width>40</width>
-				<height>40</height>
-				<visible>true</visible>
-				<colordiffuse>$VAR[value_headercolor]</colordiffuse>
-				<texturefocus flipy="true" colordiffuse="$VAR[value_headercolor]">arrow.png</texturefocus>
-				<texturenofocus colordiffuse="FFFFAAFF">arrow_down.png</texturenofocus>
-				<label>-</label>
-				<wrapmultiline>true</wrapmultiline>
-				<font>font12</font>
-				<textcolor>FFFFFFFF</textcolor>
-				<focusedcolor>FFFFFFFF</focusedcolor>
-				<disabledcolor>80FFFFFF</disabledcolor>
-				<invalidcolor>FFFFFFFF</invalidcolor>			 
-				<align></align>
-				<aligny></aligny>
-				<textoffsetx></textoffsetx>
-				<textoffsety></textoffsety>
-				<pulseonselect></pulseonselect>
-				<onclick>pagedown(95)</onclick>
-				<onfocus>-</onfocus>
-				<onunfocus>-</onunfocus>
-				<onup>105</onup>
-				<ondown>85</ondown>
-				<onleft>9900</onleft>
-				<onright>85</onright>
-			</control>
-		</control>	
+<!-- ngo hinzugefügt manuel scroll plot nicht sets no Focus(5801)-->
+            <control type="group">
+                <left>1370</left>
+                <top>456</top>
+                <width>570</width>
+                <height>540</height>
+                <visible>!Control.HasFocus(5801)+String.IsEmpty(Container(5801))</visible>
+                    <control type="label">
+                        <left>30</left>
+                        <top>0</top>
+                        <height>60</height>
+                        <width>870</width>
+                        <aligny>center</aligny>
+                        <font>Font_22</font>
+                        <label>$INFO[ListItem.Label]</label>
+                        <include>listcolor</include>
+                    </control>
+                    <control type="image">
+                        <left>0</left>
+                        <top>65</top>
+                        <width>560</width>
+                        <height>3</height>
+                        <texture>separator.png</texture>
+                    </control>
+                    <control type="textbox">
+                    <!-- Plot -->
+                        <left>0</left>
+                        <top>70</top>
+                        <width>520</width>
+                        <height>425</height>
+                        <align>justify</align>
+                        <font>Font_18A</font>
+                        <label>$VAR[value_plotmoviesets]</label>
+                        <textcolor>FFFFFAF0</textcolor>
+                        <pagecontrol>95</pagecontrol>
+                        <autoscroll delay="8000" time="2000" repeat="8000">!Skin.HasSetting(noinfoplotscroll)</autoscroll>
+                        <visible>!Control.HasFocus(5801)</visible>
+                    </control>
+
+                    <control type="scrollbar" id="95">
+                        <include>ScrollBar_Vertical</include>
+                        <left>960</left>
+                        <top>652</top>
+                        <height>0</height>
+                        <onleft>0</onleft> 
+                        <onright>65</onright>
+                        <include>Animation_Fade</include>
+                        <visible allowhiddenfocus="true">String.IsEqual(Container.Viewmode,SETS) + Control.HasFocus(95)</visible>
+                    </control>
+                    <control type="button" id="105">
+                        <description>My first button control</description>
+                        <left>-40</left>
+                        <top>0</top>
+                        <width>40</width>
+                        <height>40</height>
+                        <visible>true</visible>
+                        <colordiffuse>$VAR[value_headercolor]</colordiffuse>
+                        <texturefocus colordiffuse="$VAR[value_headercolor]">arrow.png</texturefocus>
+                        <texturenofocus colordiffuse="FFFFAAFF">arrow_up.png</texturenofocus>
+                        <label>-</label>
+                        <wrapmultiline>true</wrapmultiline>
+                        <font>font12</font>
+                        <textcolor>FFFFFFFF</textcolor>
+                        <focusedcolor>FFFFFFFF</focusedcolor>
+                        <disabledcolor>80FFFFFF</disabledcolor>
+                        <invalidcolor>FFFFFFFF</invalidcolor>
+                        <align></align>
+                        <aligny></aligny>
+                        <textoffsetx></textoffsetx>
+                        <textoffsety></textoffsety>
+                        <pulseonselect></pulseonselect>
+                        <onclick>pageup(95)</onclick>
+                        <onfocus>-</onfocus>
+                        <onunfocus>-</onunfocus>
+                        <onup>85</onup>
+                        <ondown>115</ondown>
+                        <onleft>9900</onleft>
+                        <onright>85</onright>
+                    </control>
+                    <control type="button" id="115">
+                        <description>My first button control</description>
+                        <left>-40</left>
+                        <top>82</top>
+                        <width>40</width>
+                        <height>40</height>
+                        <visible>true</visible>
+                        <colordiffuse>$VAR[value_headercolor]</colordiffuse>
+                        <texturefocus flipy="true" colordiffuse="$VAR[value_headercolor]">arrow.png</texturefocus>
+                        <texturenofocus colordiffuse="FFFFAAFF">arrow_down.png</texturenofocus>
+                        <label>-</label>
+                        <wrapmultiline>true</wrapmultiline>
+                        <font>font12</font>
+                        <textcolor>FFFFFFFF</textcolor>
+                        <focusedcolor>FFFFFFFF</focusedcolor>
+                        <disabledcolor>80FFFFFF</disabledcolor>
+                        <invalidcolor>FFFFFFFF</invalidcolor>
+                        <align></align>
+                        <aligny></aligny>
+                        <textoffsetx></textoffsetx>
+                        <textoffsety></textoffsety>
+                        <pulseonselect></pulseonselect>
+                        <onclick>pagedown(95)</onclick>
+                        <onfocus>-</onfocus>
+                        <onunfocus>-</onunfocus>
+                        <onup>105</onup>
+                        <ondown>85</ondown>
+                        <onleft>9900</onleft>
+                        <onright>85</onright>
+                    </control>
+            </control>
 <!-- ngo hinzugefügt manuel scroll plot-->
 
-		
+
             <control type="image">
                 <!-- Banner -->
                 <left>1020</left>
@@ -616,7 +590,7 @@
                         <bordertexture border="-2">black.png</bordertexture>
                     </control>
                 </control>
-				
+
 <!-- ngo hinzugefügt -->
                 <control type="group">
                     <!-- CDART VIDEO -->
@@ -663,13 +637,13 @@
                         <aspectratio align="right" aligny="bottom">keep</aspectratio>
                         <fadetime>FanartCrossFadeTime</fadetime>
                         <visible>Window.IsActive(videos) + !Skin.HasSetting(noartsetsvideo)</visible>
-						<!-- <visible>!String.Contains(ListItem.Path,videodb://movies/sets)</visible> -->
-						<visible>String.IsEmpty(Window(0).Property(SkinHelper.ListItem.5.Art.DiscArt))</visible> <!-- ngo : logoandclearart bei 5 filmen (ab 6ten film) im set ausgeblendet -->
+                        <!-- <visible>!String.Contains(ListItem.Path,videodb://movies/sets)</visible> -->
+                        <visible>String.IsEmpty(Window(0).Property(SkinHelper.ListItem.5.Art.DiscArt))</visible> <!-- ngo : logoandclearart bei 5 filmen (ab 6ten film) im set ausgeblendet -->
                     </control>
                 </control>
-<!-- ngo hinzugefügt -->				
-				
-				
+<!-- ngo hinzugefügt -->
+
+
                 <control type="group">
                     <!-- FILMES ESTOJO film poster mit hülle und codec-->
                     <left>1028</left>
@@ -712,11 +686,11 @@
                 </control>
                 <control type="list" id="65">
                     <viewtype label="SETS">list</viewtype>
-					<left>0</left>
-					<top>652</top>
-					<width>1000</width>
-					<height>294</height>
-<!--              	<left>1350</left>
+                    <left>0</left>
+                    <top>652</top>
+                    <width>1000</width>
+                    <height>294</height>
+<!--                <left>1350</left>
                     <top>436</top>
                     <width>570</width>
                     <height>540</height> -->
@@ -746,16 +720,16 @@
                             <include>listcolor</include>
                         </control>
 <!-- ngo label 2 -->
-						<control type="image">
-							<left>790</left>
-							<top>0</top>
-							<width>145</width>
-							<height>60</height>
-							<texture>grey.png</texture>
-							<animation effect="fade" end="20" condition="true">conditional</animation>
-							<visible>[Container.Content(movies) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(songs) | Container.Content(albums) | Container.Content(years)]</visible>
-						</control>
-				        <control type="label">
+                        <control type="image">
+                            <left>790</left>
+                            <top>0</top>
+                            <width>145</width>
+                            <height>60</height>
+                            <texture>grey.png</texture>
+                            <animation effect="fade" end="20" condition="true">conditional</animation>
+                            <visible>[Container.Content(movies) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(songs) | Container.Content(albums) | Container.Content(years)]</visible>
+                        </control>
+                        <control type="label">
                             <left>800</left>
                             <top>0</top>
                             <width>128</width>
@@ -766,32 +740,32 @@
                             <include>detailcolor</include>
                             <label>$INFO[ListItem.Label2]</label>
                         </control>
-						
-<!-- ngo hinzugefügt icon videolist /bluray,bluray rip, 3d etc -->				
-						<control type="image">
-							<left>950</left>
-							<top>0</top>
-							<width>40</width>
-							<height>60</height>
-							<texture>$VAR[VideoResolutionFlag]</texture>
-							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-							<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
-						</control>
+
 <!-- ngo hinzugefügt icon videolist /bluray,bluray rip, 3d etc -->
-<!-- ngo hinzugefügt watched status -->						
-						<control type="image">
-							<left>957</left>
-							<top>0</top>
+                        <control type="image">
+                            <left>950</left>
+                            <top>0</top>
+                            <width>40</width>
+                            <height>60</height>
+                            <texture>$VAR[VideoResolutionFlag]</texture>
+                            <colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+                            <visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
+                        </control>
+<!-- ngo hinzugefügt icon videolist /bluray,bluray rip, 3d etc -->
+<!-- ngo hinzugefügt watched status -->
+                        <control type="image">
+                            <left>957</left>
+                            <top>0</top>
                             <width>45</width>
                             <height>45</height>
-							<texture>$VAR[value_watchedstyle]</texture>
-							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-							<aspectratio align="center" aligny="top">keep</aspectratio>
-							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
-						</control>
-<!-- ngo hinzugefügt watched status -->						
+                            <texture>$VAR[value_watchedstyle]</texture>
+                            <colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+                            <aspectratio align="center" aligny="top">keep</aspectratio>
+                            <visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
+                        </control>
+<!-- ngo hinzugefügt watched status -->
 
-						
+
                     </itemlayout>
                     <focusedlayout height="60">
                         <control type="image">
@@ -824,16 +798,16 @@
                             <include>listcolorfocus</include>
                         </control>
 <!-- ngo label 2 -->
-						<control type="image">
-							<left>790</left>
-							<top>0</top>
-							<width>145</width>
-							<height>60</height>
-							<texture>grey.png</texture>
-							<animation effect="fade" end="20" condition="true">conditional</animation>
-							<visible>[Container.Content(movies) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(songs) | Container.Content(albums) | Container.Content(years)]</visible>
-						</control>
-				        <control type="label">
+                        <control type="image">
+                            <left>790</left>
+                            <top>0</top>
+                            <width>145</width>
+                            <height>60</height>
+                            <texture>grey.png</texture>
+                            <animation effect="fade" end="20" condition="true">conditional</animation>
+                            <visible>[Container.Content(movies) | Container.Content(musicvideos) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(songs) | Container.Content(albums) | Container.Content(years)]</visible>
+                        </control>
+                        <control type="label">
                             <left>800</left>
                             <top>0</top>
                             <width>128</width>
@@ -844,46 +818,31 @@
                             <include>detailcolor</include>
                             <label>$INFO[ListItem.Label2]</label>
                         </control>
-						
-<!-- ngo hinzugefügt icon videolist /bluray,bluray rip, 3d etc -->				
-						<control type="image">
-							<left>950</left>
-							<top>0</top>
-							<width>40</width>
-							<height>60</height>
-							<texture>$VAR[VideoResolutionFlag]</texture>
-							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-							<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
-						</control>
+
 <!-- ngo hinzugefügt icon videolist /bluray,bluray rip, 3d etc -->
-<!-- ngo hinzugefügt watched status -->						
-						<control type="image">
-							<left>957</left>
-							<top>0</top>
+                        <control type="image">
+                            <left>950</left>
+                            <top>0</top>
+                            <width>40</width>
+                            <height>60</height>
+                            <texture>$VAR[VideoResolutionFlag]</texture>
+                            <colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+                            <visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
+                        </control>
+<!-- ngo hinzugefügt icon videolist /bluray,bluray rip, 3d etc -->
+<!-- ngo hinzugefügt watched status -->
+                        <control type="image">
+                            <left>957</left>
+                            <top>0</top>
                             <width>45</width>
                             <height>45</height>
-							<texture>$VAR[value_watchedstyle]</texture>
-							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-							<aspectratio align="center" aligny="top">keep</aspectratio>
-							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
-						</control>
-<!-- ngo hinzugefügt watched status -->	
+                            <texture>$VAR[value_watchedstyle]</texture>
+                            <colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+                            <aspectratio align="center" aligny="top">keep</aspectratio>
+                            <visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
+                        </control>
+<!-- ngo hinzugefügt watched status -->
                     </focusedlayout>
-                </control>
-                <control type="image">
-                    <left>1350</left>
-                    <top>435</top>
-                    <width>45</width>
-                    <height>543</height>
-                    <texture>shadow.png</texture>
-                    <colordiffuse>C3FFFFFF</colordiffuse>
-                </control>
-                <control type="image">
-                    <left>1350</left>
-                    <top>436</top>
-                    <width>3</width>
-                    <height>540</height>
-                    <texture>separator_v.png</texture>
                 </control>
             </control>
             <control type="image">
@@ -899,7 +858,7 @@
                 <top>440</top>
                 <height>540</height>
                 <!-- <onleft>9900</onleft> -->
-				<onleft>105</onleft>
+                <onleft>105</onleft>
                 <onright>65</onright>
                 <include>Animation_Fade</include>
                 <visible allowhiddenfocus="true">String.IsEqual(Container.Viewmode,SETS) + Control.HasFocus(85)</visible>

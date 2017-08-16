@@ -998,6 +998,13 @@
 					<selected>!Skin.HasSetting(noscrollsetsinfo)</selected>
 					<visible>String.IsEqual(Container.Viewmode,SETS)</visible>
 				</control>
+				<control type="radiobutton" id="10000">
+					<include>TopMenuRadioButton</include>
+					<label>Info Plot scroll</label>
+					<onclick>Skin.ToggleSetting(noinfoplotscroll)</onclick>
+					<selected>!Skin.HasSetting(noinfoplotscroll)</selected>
+					<visible>String.IsEqual(Container.Viewmode,SETS)</visible>
+				</control>
 <!-- ngo hinzugefügt -->
 				<!-- ShowCase -->
 				<control type="radiobutton" id="92100">
