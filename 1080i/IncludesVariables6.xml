@@ -4810,7 +4810,7 @@ Ultra)]">$INFO[VideoPlayer.VideoCodec,flags/casecodec/,.png]</value>
 		<value condition="Container.Content(addons) + String.Contains(skin.string(programsfanart),fanart)">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="Container.Content(addons) + String.Contains(skin.string(programsfanart),fallback)">$INFO[Skin.String(CustomFallbackProgramsBG)]</value>
 		<value condition="Container.Content(addons) + String.Contains(skin.string(programsfanart),curtains)">special://skin/backgrounds/extras/curtains.jpg</value>
-		<value>$INFO[ListItem.Art(fanart)]</value>
+		<!-- <value>$INFO[ListItem.Art(fanart)]</value> -->
 		</variable>
 	<variable name="value_musicfanart">
 		<value condition="[Container.Content(artists) | Container.Content(albums) | Container.Content(songs)] + String.Contains(skin.string(musicfanart),fallback)">$INFO[Skin.String(CustomFallbackMusicBG)]</value>

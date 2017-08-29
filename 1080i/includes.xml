@@ -1291,24 +1291,36 @@
 			<include>FlagSeparator</include>
 			<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.0.Codec))</visible>
 		</control>
-		<control type="label">
-			<!-- Audio Language -->
-			<include>FlagLabelHelper</include>
-			<label>$VAR[value_kaudiolanguage0]</label>
-		</control>
-		<control type="image">
-			<include>FlagSeparator</include>
-			<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.0.Codec))</visible>
-		</control>
-		<control type="label">
-			<!-- Subtitle -->
-			<include>FlagLabelHelper</include>
-			<label>$VAR[value_ksubtitle0]</label>
-		</control>
-		<control type="image">
-			<include>FlagSeparator</include>
-			<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.1.Codec))</visible>
-		</control>
+        
+        
+        <!--<control type="image">
+            <include>FlagImageHelper</include>
+            <texture fallback="blanc.png">osd_audio.png</texture>
+        </control> -->
+        <control type="label">
+            <!-- Audio Language -->
+            <include>FlagLabelHelper</include>
+            <label>$VAR[value_kaudiolanguage0]</label>
+        </control>
+        <control type="image">
+            <include>FlagSeparator</include>
+            <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.0.Codec))</visible>
+        </control>
+        
+        <!--<control type="image">
+            <include>FlagImageHelper</include>
+            <texture fallback="blanc.png">osd_subtitle.png</texture>
+        </control> -->
+        <control type="label">
+            <!-- Subtitle -->
+            <include>FlagLabelHelper</include>
+            <label>$VAR[value_ksubtitle0]</label>
+        </control>
+        <control type="image">
+            <include>FlagSeparator</include>
+            <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.1.Codec))</visible>
+        </control>
+        
 		<control type="image">
 			<!-- Codec de video -->
 			<include>FlagImageHelper</include>

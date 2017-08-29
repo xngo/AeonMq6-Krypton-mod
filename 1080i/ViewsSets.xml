@@ -35,6 +35,42 @@
             <!-- default group -->
             <animation effect="fade" time="400">VisibleChange</animation>
             <visible>String.IsEqual(Container.Viewmode,SETS)</visible>
+            
+            <!-- flags separator -->
+            <control type="image">
+                <left>0</left>
+                <top>968</top>
+                <width>1920</width>
+                <height>45</height>
+                <texture flipy="true">shadow_h.png</texture>
+                <colordiffuse>C3FFFFFF</colordiffuse>
+            </control>
+             <control type="image">
+                <left>0</left>
+                <top>970</top>
+                <height>86</height>
+                <width>1920</width>
+                <texture>gradient_small.png</texture>
+             </control>
+             
+            <control type="image">
+                <left>1000</left>
+                <top>980</top>
+                <width>3</width>
+                <height>40</height>
+                <texture>separator_v.png</texture>
+                <visible>!String.IsEqual(Container.Viewmode,AEON)+String.Contains(ListItem.Path,videodb://movies/sets)</visible>
+            </control>
+            <control type="image">
+                <left>10</left>
+                <top>1000</top>
+                <width>1900</width>
+                <height>3</height>
+                <texture>separator.png</texture>
+                <visible>!String.IsEqual(Container.Viewmode,AEON)+String.Contains(ListItem.Path,videodb://movies/sets)</visible>
+            </control>
+             <!-- flags separator --> 
+             
             <control type="image">
                 <!-- fundo da parte de baixo -->
                 <left>0</left>
@@ -299,21 +335,7 @@
                 <visible>Control.HasFocus(5801)</visible>
             </control> -->
             
-            <control type="image">
-                <left>1350</left>
-                <top>435</top>
-                <width>45</width>
-                <height>543</height>
-                <texture>shadow.png</texture>
-                <colordiffuse>C3FFFFFF</colordiffuse>
-            </control>
-            <control type="image">
-                <left>1350</left>
-                <top>436</top>
-                <width>3</width>
-                <height>540</height>
-                <texture>separator_v.png</texture>
-            </control>
+
 <!-- ngo hinzugefügt manuel scroll plot in set ansicht-->
             <control type="group">
                 <left>45</left>
@@ -407,6 +429,26 @@
                         <onright>85</onright>
                     </control>
             </control>
+            
+            <control type="group">
+                <visible>!Control.HasFocus(5801)+String.IsEmpty(Container(5801))</visible>
+                    <control type="image">
+                        <left>1350</left>
+                        <top>436</top>
+                        <width>45</width>
+                        <height>533</height>
+                        <texture>shadow.png</texture>
+                        <colordiffuse>C3FFFFFF</colordiffuse>
+                    </control>
+                    <control type="image">
+                        <left>1350</left>
+                        <top>436</top>
+                        <width>3</width>
+                        <height>533</height>
+                        <texture>separator_v.png</texture>
+                    </control>
+            </control>
+            
 <!-- ngo hinzugefügt manuel scroll plot nicht sets no Focus(5801)-->
             <control type="group">
                 <left>1370</left>
@@ -414,6 +456,7 @@
                 <width>570</width>
                 <height>540</height>
                 <visible>!Control.HasFocus(5801)+String.IsEmpty(Container(5801))</visible>
+                
                     <control type="label">
                         <left>30</left>
                         <top>0</top>
@@ -572,29 +615,11 @@
             </control>
             <control type="group">
                 <animation effect="slide" start="0,0" end="2050,0" time="250" tween="sine" easing="out" condition="Control.HasFocus(5801)">Conditional</animation>
-                <control type="group">
-                    <!-- VIDEO SEM ESTOJO -->
-                    <left>1005</left>
-                    <top>440</top>
-                    <include>Animation_Fade</include>
-                    <visible>Skin.HasSetting(nosetsvideocase)</visible>
-                    <control type="image">
-                        <!-- Filmes/Fotos/Arquivos -->
-                        <left>0</left>
-                        <top>0</top>
-                        <width>345</width>
-                        <height>536</height>
-                        <fadetime>FanartCrossFadeTime</fadetime>
-                        <aspectratio align="right" aligny="bottom">stretch</aspectratio>
-                        <texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
-                        <bordertexture border="-2">black.png</bordertexture>
-                    </control>
-                </control>
 
 <!-- ngo hinzugefügt -->
                 <control type="group">
                     <!-- CDART VIDEO -->
-                    <animation type="WindowOpen">
+<!--                     <animation type="WindowOpen">
                         <effect type="slide" start="-150,0" end="0,0" time="500" delay="500" tween="cubic" easing="out" />
                         <effect type="fade" start="0" end="100" time="500" delay="500" />
                     </animation>
@@ -607,7 +632,25 @@
                         <effect type="slide" start="0,0" end="-150,0" time="300" tween="cubic" easing="out" />
                         <effect type="fade" start="100" end="0" time="200" />
                     </animation>
-                    <animation effect="slide" time="200" start="0,0" end="0,-30" tween="cubic" easing="out" condition="!Skin.HasSetting(nosetsvideocase)">Conditional</animation>
+                    <animation effect="slide" time="200" start="0,0" end="0,-30" tween="cubic" easing="out" condition="!Skin.HasSetting(nosetsvideocase)">Conditional</animation> -->
+                    
+                    <animation type="Visible">
+                        <effect type="slide" start="-500,-900" end="0,0" time="600" tween="cubic" easing="out" />
+                        <effect type="fade" start="0" end="100" time="600" />
+                    </animation>
+                    <animation type="WindowOpen">
+                        <effect type="slide" start="-500,-900" end="0,0" time="600" tween="cubic" easing="out" />
+                        <effect type="fade" start="0" end="100" time="600" />
+                    </animation>
+                    <animation type="WindowClose">
+                        <effect type="slide" start="0,0" end="500,-900,0" time="600" tween="cubic" easing="out" />
+                        <effect type="fade" start="100" end="0" time="600" />
+                    </animation>
+                    <animation type="Hidden">
+                        <effect type="slide" start="0,0" end="500,-900,0" time="600" tween="cubic" easing="out" />
+                        <effect type="fade" start="100" end="0" time="600" />
+                    </animation>
+                    
                     <visible>![String.IsEmpty(ListItem.Art(discart)) | Skin.HasSetting(nosetsdiscart) | String.Contains(ListItem.Path,videodb://movies/sets)] + Window.IsActive(videos) + Control.IsVisible(9923)</visible>
                     <control type="image">
                         <left>1025</left>
@@ -643,6 +686,24 @@
                 </control>
 <!-- ngo hinzugefügt -->
 
+                <control type="group">
+                    <!-- VIDEO SEM ESTOJO -->
+                    <left>1005</left>
+                    <top>440</top>
+                    <include>Animation_Fade</include>
+                    <visible>Skin.HasSetting(nosetsvideocase)</visible>
+                    <control type="image">
+                        <!-- Filmes/Fotos/Arquivos -->
+                        <left>0</left>
+                        <top>0</top>
+                        <width>345</width>
+                        <height>536</height>
+                        <fadetime>FanartCrossFadeTime</fadetime>
+                        <aspectratio align="right" aligny="bottom">stretch</aspectratio>
+                        <texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
+                        <bordertexture border="-2">black.png</bordertexture>
+                    </control>
+                </control>
 
                 <control type="group">
                     <!-- FILMES ESTOJO film poster mit hülle und codec-->
@@ -687,9 +748,9 @@
                 <control type="list" id="65">
                     <viewtype label="SETS">list</viewtype>
                     <left>0</left>
-                    <top>652</top>
+                    <top>625</top>
                     <width>1000</width>
-                    <height>294</height>
+                    <height>343</height>
 <!--                <left>1350</left>
                     <top>436</top>
                     <width>570</width>
@@ -845,13 +906,23 @@
                     </focusedlayout>
                 </control>
             </control>
+            
+            <control type="image">
+                <left>958</left>
+                <top>436</top>
+                <width>45</width>
+                <height>533</height>
+                <texture flipx="true">shadow.png</texture>
+                <colordiffuse>C3FFFFFF</colordiffuse>
+            </control>
             <control type="image">
                 <left>1000</left>
                 <top>436</top>
                 <width>3</width>
-                <height>540</height>
+                <height>533</height>
                 <texture>separator_v.png</texture>
             </control>
+            
             <control type="scrollbar" id="85">
                 <include>ScrollBar_Vertical</include>
                 <left>1312</left>
